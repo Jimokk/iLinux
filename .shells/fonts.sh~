@@ -1,0 +1,30 @@
+#!/bin/bash
+
+
+cfgFN='.config/'
+zipFN=$cfgFN'Win11Fonts.tar.gz'
+dirFN=$cfgFN'win11Fonts'
+
+
+
+# 判断ZIP文件是否存在
+if [ ! -e $zipFN ] ; then
+    echo 'fonts.tar.gz文件不存在,请重新拉取项目后重试';
+    exit;
+fi
+
+
+if [ ! -d $dirFN ] ; then
+   echo 'DIR文件不存在,执行解压缩....';
+   tar -zxvf $zipFN && echo '解压缩完成,开始CP..'
+   else echo '文件已存在,开始执行CP..'
+fi
+
+exit;
+
+cp -R $dirFN /usr/share/fonts/ && echo 'CP完成,开始更新文字缓存'
+fc-cache -fv && echo '缓存更新完成，Win11字体已生效'
+   
+
+
+
