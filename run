@@ -1,8 +1,7 @@
 #!/bin/bash
 
-. .shells/common/index.sh
-
-.shells/fonts.sh
+. .env/env.sh
+# .shells/fonts.sh
 
 
 # .shells/test.sh
