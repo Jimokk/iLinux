@@ -1,8 +1,8 @@
 #!/bin/bash
 
 . .env/env.sh
+
 # .shells/fonts.sh
 
 
-# .shells/test.sh
 .shells/kali_terminal.sh
