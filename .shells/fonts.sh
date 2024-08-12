@@ -6,9 +6,9 @@
 
 # 执行操做
 function RUN() {
-	cp -R $dir_Win11Fonts /usr/share/fonts/ && 
+	sudo cp -R $dir_Win11Fonts /usr/share/fonts/ && 
 	info 'copying...' &&
-	fc-cache -fv && 
+	sudo fc-cache -fv && 
 	info '缓存更新完成，Win11字体已生效'
 }
    
@@ -19,4 +19,4 @@ else
 	RUN;
 fi
 
-exit;
+exit

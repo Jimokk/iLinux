@@ -2,10 +2,20 @@
 
 . $LOG
 
-#sudo dpkg --add-architecture i386 &&
-#sudo apt-get update &&
-#sudo apt install wine &&
-#winecfg
+
+_i386='y'
+
+info_inline '是否开启32位程序支持？(Y/n):'
+read _i386
+
+if [[ $i386 = "y" ]] ; then
+    sudo dpkg --add-architecture i386
+fi
+
+sudo dpkg --add-architecture i386 &&
+sudo apt-get update &&
+sudo apt install wine &&
+winecfg
 
 if [[ ! -e /usr/share/applications/wine.desktop ]] ; then
     sudo ln -s /usr/share/doc/wine/examples/wine.desktop /usr/share/applications/
