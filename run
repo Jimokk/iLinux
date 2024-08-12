@@ -5,4 +5,6 @@
 # .shells/fonts.sh
 
 
-.shells/kali_terminal.sh
+#.shells/kali_terminal.sh
+
+.shells/install/wine.sh
