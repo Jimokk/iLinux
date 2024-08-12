@@ -7,4 +7,6 @@
 
 #.shells/kali_terminal.sh
 
-.shells/install/wine.sh
+# .shells/install/wine.sh
+
+.shells/install/fcitx5.sh
